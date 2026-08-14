@@ -1,9 +1,10 @@
 {
   "name": "codeforest",
   "displayName": "CodeForest",
-  "description": "CodeForest — a plugin from VibeDecode for code visualization",
-  "version": "0.1.5",
+  "description": "Interactive code-dependency graphs for VS Code. Originally a VibeDecode feature, now open source.",
+  "version": "0.1.6",
   "publisher": "vibedecode",
+  "author": "Implex Labs",
   "icon": "media/icon.png",
   "engines": {
     "vscode": "^1.85.0"
@@ -21,7 +22,7 @@
     "python",
     "typescript"
   ],
-  "homepage": "https://github.com/codesbya8h1/codeforest-ext/codeforest-ext#readme",
+  "homepage": "https://github.com/codesbya8h1/codeforest-ext#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/codesbya8h1/codeforest-ext"

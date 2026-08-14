@@ -1,6 +1,8 @@
 # CodeForest — VS Code Extension
 
-**CodeForest** is an open source plugin from [VibeDecode](https://vibe-decode.com) for interactive, animated code-dependency graph visualization inside VS Code and Cursor.
+**CodeForest** is an open-source VS Code / Cursor extension for interactive, animated code-dependency graph visualization.
+
+Originally built as a VibeDecode feature; open-sourced here as CodeForest.
 
 One click — your entire workspace rendered as a live, explorable graph.
 
@@ -80,6 +82,29 @@ cursor --install-extension /tmp/codeforest-latest.vsix
 
 ---
 
+## Develop from source
+
+```bash
+git clone https://github.com/codesbya8h1/codeforest-ext.git
+cd codeforest-ext
+npm install
+npm run build
+```
+
+Then open this folder in VS Code or Cursor, press `F5` to launch the Extension Development Host, open a project folder in that window, and run **CodeForest: Visualize Workspace**.
+
+To produce a VSIX:
+
+```bash
+npm run package
+```
+
+Python 3.9+ must be on your `PATH`. Backend dependencies are installed into a private virtual environment on first run.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more.
+
+---
+
 ## Architecture
 
 ```
@@ -136,6 +161,8 @@ Files in `node_modules/`, `dist/`, `build/`, `.git/`, and other common output di
 
 ## About
 
-CodeForest is an open source plugin provided by [VibeDecode](https://vibe-decode.com) suite — AI-powered code architecture visualization for developers.
+Originally built as a VibeDecode feature; open-sourced here as CodeForest.
 
-**License:** MIT
+**License:** MIT — see [LICENSE](LICENSE)
+
+**Security:** see [SECURITY.md](SECURITY.md)

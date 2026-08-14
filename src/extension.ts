@@ -250,8 +250,8 @@ class BackendServer {
 
 // ─── Webview panel ────────────────────────────────────────────────────────────
 
-class VibedecodePanel {
-  private static instance: VibedecodePanel | undefined;
+class CodeForestPanel {
+  private static instance: CodeForestPanel | undefined;
   private readonly panel: vscode.WebviewPanel;
   private readonly backend: BackendServer;
   private readonly extensionUri: vscode.Uri;
@@ -263,8 +263,8 @@ class VibedecodePanel {
     output: vscode.OutputChannel
   ): void {
     const column = vscode.window.activeTextEditor?.viewColumn ?? vscode.ViewColumn.One;
-    if (VibedecodePanel.instance) {
-      VibedecodePanel.instance.panel.reveal(column);
+    if (CodeForestPanel.instance) {
+      CodeForestPanel.instance.panel.reveal(column);
       return;
     }
     const panel = vscode.window.createWebviewPanel(
@@ -277,11 +277,11 @@ class VibedecodePanel {
         retainContextWhenHidden: true,
       }
     );
-    VibedecodePanel.instance = new VibedecodePanel(panel, extensionUri, backend, output);
+    CodeForestPanel.instance = new CodeForestPanel(panel, extensionUri, backend, output);
   }
 
   static dispose(): void {
-    VibedecodePanel.instance?.panel.dispose();
+    CodeForestPanel.instance?.panel.dispose();
   }
 
   private constructor(
@@ -296,7 +296,7 @@ class VibedecodePanel {
     this.output = output;
 
     this.panel.webview.html = this.getHtml();
-    this.panel.onDidDispose(() => { VibedecodePanel.instance = undefined; });
+    this.panel.onDidDispose(() => { CodeForestPanel.instance = undefined; });
 
     this.panel.webview.onDidReceiveMessage(async (msg) => {
       switch (msg.type) {
@@ -386,7 +386,7 @@ height:100vh;margin:0;background:#0d1117;color:#8b949e;}
 .msg{text-align:center}.title{color:#e6edf3;font-size:1.2rem;margin-bottom:8px}
 </style></head><body><div class="msg">
 <div class="title">CodeForest — Webview not built</div>
-<p>Run <code>npm run build</code> inside <code>vscode-extension/</code> to build the UI.</p>
+<p>Run <code>npm run build</code> at the repository root to build the UI.</p>
 </div></body></html>`;
   }
 }
@@ -412,7 +412,7 @@ export function activate(context: vscode.ExtensionContext): void {
       );
       return;
     }
-    VibedecodePanel.createOrShow(context.extensionUri, backend, output);
+    CodeForestPanel.createOrShow(context.extensionUri, backend, output);
   });
 
   context.subscriptions.push(cmd, output);
@@ -420,5 +420,5 @@ export function activate(context: vscode.ExtensionContext): void {
 
 export function deactivate(): void {
   backend?.stop();
-  VibedecodePanel.dispose();
+  CodeForestPanel.dispose();
 }

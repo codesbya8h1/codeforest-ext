@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.6] — 2026-08-13
+
+### Changed
+- Open-source branding: CodeForest is the product name; VibeDecode is credited as the origin
+- Homepage, repository, and issues links now point at GitHub instead of vibe-decode.com
+- Renamed internal identifiers (`CodeForestPanel`, backend title, webview package) off the VibeDecode product name
+
+### Added
+- Develop-from-source instructions, CONTRIBUTING.md, SECURITY.md, and `.vscodeignore`
+
+---
+
 ## [0.1.4] — 2026-06-29
 
 ### Added

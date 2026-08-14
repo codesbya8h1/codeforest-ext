@@ -1,5 +1,5 @@
 """
-VibeDecode Extension Backend
+CodeForest extension backend.
 Lightweight FastAPI server for analyzing a local workspace directory.
 Run: python main.py --port 8765
 """
@@ -540,7 +540,7 @@ def build_file_graph(f: str, workspace_dir: str) -> FileGraph:
 
 # ─── FastAPI app ──────────────────────────────────────────────────────────────
 
-app = FastAPI(title="VibeDecode Extension Backend")
+app = FastAPI(title="CodeForest Extension Backend")
 
 app.add_middleware(
     CORSMiddleware,

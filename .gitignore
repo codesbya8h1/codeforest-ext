@@ -4,6 +4,12 @@ webview-ui/dist/
 webview-ui/node_modules/
 node_modules/
 
+# Python
+**/__pycache__/
+**/*.pyc
+.venv/
+venv/
+
 # VSIX packages (optional — remove if you want releases in the repo)
 *.vsix
 

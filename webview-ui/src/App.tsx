@@ -67,7 +67,7 @@ export default function App() {
         <EmptyState
           icon="📂"
           title="No workspace open"
-          desc="Open a folder in VS Code, then run VibeDecode to visualize its code graph."
+          desc="Open a folder in VS Code, then run CodeForest to visualize its code graph."
         />
       </div>
     );
@@ -200,7 +200,7 @@ function Logo() {
         CodeForest
       </div>
       <div className="text-[10px] tracking-widest uppercase" style={{ color: "rgba(148,163,184,0.45)" }}>
-        by VibeDecode
+        from VibeDecode
       </div>
     </div>
   );
