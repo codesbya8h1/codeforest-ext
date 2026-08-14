@@ -1,0 +1,15 @@
+# Build output
+out/
+webview-ui/dist/
+webview-ui/node_modules/
+node_modules/
+
+# VSIX packages (optional — remove if you want releases in the repo)
+*.vsix
+
+# macOS
+.DS_Store
+
+# VS Code local settings
+.vscode/settings.json
+.vscode/launch.json

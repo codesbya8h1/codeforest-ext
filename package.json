@@ -1,0 +1,73 @@
+{
+  "name": "codeforest",
+  "displayName": "CodeForest",
+  "description": "CodeForest — a plugin from VibeDecode for code visualization",
+  "version": "0.1.4",
+  "publisher": "vibedecode",
+  "icon": "media/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "graph",
+    "dependency",
+    "visualization",
+    "codeforest",
+    "vibedecode",
+    "python",
+    "typescript"
+  ],
+  "homepage": "https://github.com/codesbya8h1/codeforest-ext/codeforest-ext#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codesbya8h1/codeforest-ext"
+  },
+  "bugs": {
+    "url": "https://github.com/codesbya8h1/codeforest-ext/issues"
+  },
+  "license": "MIT",
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeforest.analyze",
+        "title": "CodeForest: Visualize Workspace",
+        "icon": "$(graph)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "codeforest.analyze",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "codeforest.analyze",
+        "key": "ctrl+shift+g",
+        "mac": "cmd+shift+g",
+        "when": "workspaceFolderCount > 0"
+      }
+    ]
+  },
+  "scripts": {
+    "compile-ext": "tsc -p ./tsconfig.json",
+    "build-webview": "cd webview-ui && npm install && npm run build",
+    "build": "npm run build-webview && npm run compile-ext",
+    "package": "npm run build && vsce package",
+    "watch": "tsc -watch -p ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0",
+    "@vscode/vsce": "^2.22.0"
+  }
+}
