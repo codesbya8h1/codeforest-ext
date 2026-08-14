@@ -2,7 +2,7 @@
   "name": "codeforest",
   "displayName": "CodeForest",
   "description": "CodeForest — a plugin from VibeDecode for code visualization",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "publisher": "vibedecode",
   "icon": "media/icon.png",
   "engines": {
