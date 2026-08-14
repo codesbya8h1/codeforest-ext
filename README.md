@@ -2,7 +2,8 @@
 
 **CodeForest** is an open-source VS Code / Cursor extension for interactive, animated code-dependency graph visualization.
 
-Originally built as a VibeDecode feature; open-sourced here as CodeForest.
+Originally built as a VibeDecode](https://
+vibe-decode.com) feature; open-sourced here as CodeForest.
 
 One click — your entire workspace rendered as a live, explorable graph.
 
@@ -161,7 +162,8 @@ Files in `node_modules/`, `dist/`, `build/`, `.git/`, and other common output di
 
 ## About
 
-Originally built as a VibeDecode feature; open-sourced here as CodeForest.
+Originally built as a VibeDecode](https://
+vibe-decode.com) feature; open-sourced here as CodeForest.
 
 **License:** MIT — see [LICENSE](LICENSE)
 
