@@ -1,5 +1,5 @@
 """
-CodeForest extension backend for analyzing the codebase.
+CodeForest extension backend.
 Lightweight FastAPI server for analyzing a local workspace directory.
 Run: python main.py --port 8765
 """
