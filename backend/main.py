@@ -77,6 +77,9 @@ class AnalyzeResponse(BaseModel):
 
 # ─── Helper utilities ─────────────────────────────────────────────────────────
 
+def test_method(self):
+    return "Hello, World!"
+
 def make_node_id(key: str) -> str:
     return hashlib.md5(key.encode()).hexdigest()[:12]
 
